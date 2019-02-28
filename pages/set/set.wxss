@@ -1,0 +1,75 @@
+.personal-center{
+  background: #FFFFFF;
+}
+.center-head{
+  padding: 40rpx 30rpx;
+}
+
+.center-head image{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.center-name{
+  display: inline-block;
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  line-height: 45rpx;
+}
+.center-border{
+  margin: auto;
+  width: 690rpx;
+  height: 4rpx;
+  background: #F7F7F7;
+}
+.center-foot{
+  padding: 38rpx 0 34rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.number-icon{
+  width: 6rpx;
+  height: 42rpx;
+  background: #F7F7F7;
+}
+.center-number{
+  display: flex;
+  flex-direction: column;
+  width: 32.8%;
+  align-items: center;
+}
+.numer-text1{
+  font-size: 36rpx;
+}
+.numer-text2{
+  display: inline-block;
+  margin-top: 24rpx;
+  font-size: 28rpx;
+  color: #999999;
+  line-height: 40rpx;
+}
+.personl-set{
+  border-top: 10rpx solid #F5F5F5;
+  background: #FFFFFF;
+}
+.set-list{
+  margin: auto;
+  padding: 30rpx 0;
+  width: 92%;
+  /* box-sizing: border-box; */
+  border-bottom: 2rpx solid #F7F7F7;
+  text-align:left;
+}
+.set-list image{
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+}
+.set-list text{
+  display: inline-block;
+  margin-left: 21rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}

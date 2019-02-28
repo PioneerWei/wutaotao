@@ -1,0 +1,112 @@
+<include src='../../loading//loading.wxml' />
+<view class='listbox' hidden='{{!isLoading}}'>
+  <view class='lihuang'>
+    <scroll-view class='categorylist-scroll' scroll-x="true" scroll-left='{{tabScroll}}' scroll-with-animation="true">
+      <block wx:for='{{detailList}}' wx:key='index'>
+        <view class='categorylist-scroll-li {{activeCurrent==index?"categorylist-scroll-checkli":""}}' data-num='{{index}}' data-id='{{item.bid}}' bindtap="clickTab">
+          <view class='scroll-li-text1'>{{item.brandname}}</view>
+          <view class='scroll-li-text2' hidden='{{item.priceshow == ""}}'>
+            <text style='font-size:20rpx;'>￥</text>
+            <text style='font-size:26rpx;font-weight: bold;'>{{item.priceshow}}</text>
+            <text style='font-size:20rpx;'>/{{item.danwei}}</text>
+          </view>
+          <view class='scroll-li-text2' hidden='{{!item.priceshow == ""}}'>-</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <swiper style='width:100%;height:100%;' current='{{activeCurrent}}' duration='0' bindchange='changeEnd'>
+    <block wx:for='{{detailList}}' wx:key='index'>
+      <swiper-item style='overflow:scroll;' item-id='{{item.bid}}' hidden="{{activeCurrent != index}}">
+        <view class='loading' hidden='{{isTab}}'>
+          <image src='/images/loading.gif'></image>
+          <text>努力加载中</text>
+        </view>
+        <scroll-view style='width:100%;height:100%;' scroll-y="true" bindscrolltolower='listLower'>
+          <view>
+            <!-- 留白 -->
+            <view class='liuding' hidden='{{!isLoading}}'></view>
+            <!-- 内容 -->
+            <view class='todayvalue' wx:if='{{showEmpty}}'>
+              <view class='todayvalue-content' data-id='{{detailValue[index].pid}}'>
+                <view class='todayvalue-details'>
+                  <image src='/images/empty.png' style='width:280rpx;height:280rpx;margin:80rpx auto 0;'></image>
+                  <view style='color:#999999;font-size:24rpx;margin-top:20rpx;margin-bottom:100rpx;'>暂无超值优惠</view>
+                </view>
+              </view>
+              <image src='/images/mostvalue@2x.png' class='value-img'></image>
+            </view>
+            <block wx:for='{{detailValue}}' wx:key='index'>
+              <view class='todayvalue'>
+                <image src='/images/mostvalue@2x.png' class='value-img'></image>
+                <view class='todayvalue-content' data-id='{{detailValue[index].pid}}' bindtap='litoDeta'>
+                  <view class='todayvalue-details'>
+                    <image src='{{item.pro_image}}'></image>
+                    <view class='todayvalue-details-text1 fontweight'>{{item.pro_title}}</view>
+                    <text class='todayvalue-details-text2'>{{item.pro_price_des}}</text>
+                    <view class='todayvalue-details-text3'>{{item.tuijian_reason}}</view>
+                  </view>
+                  <view class='business-icon busbusiness_todu_border'>
+                    <view class='read'>阅读
+                      <text>+ {{item.read_reward}}羊毛</text>
+                    </view>
+                    <view class='business-time'>
+                      <text>{{item.platform}}</text>
+                      <text></text>
+                      <text class='timeliner'>{{item.date}}</text>
+                    </view>
+
+                  </view>
+                </view>
+              </view>
+            </block>
+            <view class='otherlist'>
+              <block wx:for='{{detailContent}}' wx:key='index'>
+                <view class='otherlist-li {{item.is_guoqi == 1?"overdue_status":""}}' data-id='{{detailContent[index].pid}}' bindtap='litoDeta'>
+                  <view class='otherlist-li-details'>
+                    <view style='width:200rpx;height:200rpx;'>
+                      <image src='{{item.pro_image}}' style='width:200rpx;height:200rpx;'></image>
+                    </view>
+                    <view class='otherlist-text'>
+                      <view class='otherlist-text1 fontweight'>
+                        <text class='overdue' wx:if='{{item.is_guoqi}}'>过期</text>
+                        <text>{{item.pro_title}}</text>
+                      </view>
+                      <view class='otherlist-text2 {{item.is_guoqi == 1?"overdue_status":""}}'>{{item.pro_price_des}}</view>
+                      <view class='otherlist-text3'>{{item.tuijian_reason}}</view>
+                    </view>
+                  </view>
+                  <view class='business-icon busbusiness_other_border'>
+                    <view class='other_read' wx:if='{{!item.is_guoqi}}'>阅读
+                      <text>+ {{item.read_reward}}羊毛</text>
+                    </view>
+                    <view class='business-time'>
+                      <text>{{item.platform}}</text>
+                      <text></text>
+                      <text class='timeliner'>{{item.date}}</text>
+                    </view>
+
+                  </view>
+                </view>
+              </block>
+              <view class='loading_more' hidden='{{hidd}}'>
+                <image src='/images/loading.gif' hidden='{{isloadingMore}}'></image>
+                <text hidden='{{isloadingMore}}'>加载更多</text>
+                <text hidden='{{!isloadingMore}}'>暂无更多数据</text>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view>
+  </view>
+  <image src='/images/home@2x.png' class='indexbtn' bindtap='backHome'></image>
+  <view class='sharefriend' bindtap='listShare'>
+    <image src='/images/sendfriend@2x.png'></image>
+    <text>分享给朋友</text>
+  </view>
+  <include src='../../poster/listposter/listposter.wxml' />
+</view>

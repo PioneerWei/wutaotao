@@ -1,0 +1,48 @@
+<view class='container' style='padding-bottom:80rpx;'>
+  <view class='conversiondetails-header'>
+    <swiper style='width:100%;height:750rpx;'>
+      <block wx:for='{{image}}' wx:key='index'>
+        <swiper-item>
+          <image src='{{item}}' style='width:100%;height:750rpx;'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='condetails-tit fontweight'>{{pro_name}}</view>
+    <view class='condetails_pristate'>
+      <view class='condetails-price'>
+        <text class='price-text1 fontweight'>{{yangmao}}</text>
+        <text class='price-text2'>羊毛</text>
+      </view>
+      <view class='conversions-tate {{status==0?"status_wait":(status==1?"status_now":(status==2?"status_out":""))}}'>{{statusshow}}</view>
+    </view>
+    <view class='residuenumber'>
+      <text>· 免运费</text>
+      <text>· 剩余{{shengyu_kucun}}件</text>
+      <text>· 已兑换{{xiaoliang}}件</text>
+    </view>
+  </view>
+  <view class='conversion-details' hidden='{{isShowDeta}}'>
+    <text class='conversion-tit fontweight'>兑换详情</text>
+    <view class='conversion-head'>
+      <view class='conversion-head-icon'>
+        <block wx:for='{{goumai_avatar}}' wx:key='index'>
+          <image src='{{item}}'></image>
+        </block>
+      </view>
+      <view class='conversion-head-ellips' hidden='{{avatarNumber<15}}'>
+        <image src='/images/ellips.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='conversion-rule'>
+    <text class='conversion-tit fontweight'>兑换规则</text>
+    <view class='conversion-content'>
+      <text>{{duihuan_rule}}</text>
+    </view>
+  </view>
+  <view class='commodity-details'>
+    <text class='conversion-tit fontweight'>商品详情</text>
+    <rich-text nodes='{{detail}}' class='commodity-content'></rich-text>
+  </view>
+  <view class='woolconver-btn fontweight {{sttusshow=="立即兑换"?"btn_status_now":""}}' bindtap='converBtn'>{{sttusshow}}</view>
+</view>

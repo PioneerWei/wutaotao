@@ -1,0 +1,4 @@
+<view class='loading' hidden='{{isLoading}}'>
+  <image src='/images/loading.gif'></image>
+  <text>努力加载中</text>
+</view>

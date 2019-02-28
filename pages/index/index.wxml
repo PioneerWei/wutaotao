@@ -1,0 +1,76 @@
+<view>
+  <view class='instructions'>
+    <image src='/images/bg1.png'></image>
+    <view class='instructions_content'>
+      <view class='instructions_wool'>您已有
+        <text class='instructions_wool_num'>{{yangmao}}</text> 个羊毛，可兑换
+        <text class='instructions_wool_num'>{{duihuan}}</text> 件商品</view>
+      <view>
+        <text class='instructions_btn btn1' bindtap='goTask'>去赚羊毛</text>
+        <text class='instructions_btn btn2' bindtap='goConversion'>兑换商品</text>
+      </view>
+    </view>
+  </view>
+  <view class='nav'>
+    <view>
+      <navigator hover-class='none' url='../dailytask/dailytask'>
+        <image src='/images/daytask@2x.png'></image>
+      </navigator>
+      <text>每日任务</text>
+    </view>
+    <view>
+      <navigator url='../signin/signin' hover-class='none'>
+        <image src='/images/sign@2x.png'></image>
+      </navigator>
+      <text>打卡签到</text>
+    </view>
+    <view>
+      <navigator open-type='reLaunch' url='../conversion/conversion' hover-class='none'>
+        <image src='/images/conversion@2x.png'></image>
+      </navigator>
+      <text>羊毛商城</text>
+    </view>
+    <view bindtap='indexShare'>
+      <image src='/images/sharefriend@2x.png' style='margin-bottom:8rpx;'></image>
+      <text>分享好友</text>
+    </view>
+  </view>
+  <view class='movebox'>
+    <swiper class='moveimg' indicator-color="" indicator-active-color="" autoplay="true" interval="2000" circular="true" style='width:100%;height:300rpx;'>
+      <block wx:for="{{moveImage}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" style='width:100%;height:100%;' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <block wx:for='{{content}}' wx:for-item='item' wx:key='index'>
+    <view class='contentmost'>
+      <view>
+        <text class='content-title1'>{{item[0]}}</text>
+        <text class='content-title2'>今日全网最值价格</text>
+      </view>
+      <!-- <block wx:for='{{item.data}}' wx:key='index'> -->
+      <view class='content-box'>
+        <block wx:for='{{item.data}}' wx:key='index'>
+          <view class='content-box-list' data-id='{{item.ccid}}' data-name='{{item.name}}' bindtap='intoList'>
+            <image src='{{item.image}}' style='max-width:120rpx;max-height:120rpx;'></image>
+            <view class='content-box-price'>
+              <view class='price-text1 fontweight'>{{item.name}}</view>
+              <view class='price-text2' hidden='{{!item.is_guoqi}}'>今日暂无</view>
+              <view class='price-text2' hidden='{{item.is_guoqi}}'>
+                <text>￥</text>
+                <text class='price-text2_price'>{{item.price}}</text>
+                <text>/{{item.danwei}}</text>
+              </view>
+              <view class='price-text3' hidden='{{!item.is_guoqi}}'>-</view>
+              <view class='price-text3' hidden='{{item.is_guoqi}}'>{{item.platform}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <!-- </block> -->
+    </view>
+  </block>
+</view>
+<include src='../../poster/indexposter/indexposter.wxml' />

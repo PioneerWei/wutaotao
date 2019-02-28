@@ -1,0 +1,11 @@
+<view class='loginbox'>
+  <view class='login-logo'>
+    <image src='/images/login_03.jpg'></image>
+    <view>物淘淘</view>
+  </view>
+  <view class='login-btn'>
+    <text>— 请完成微信授权以继续使用 —</text>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信授权</button>
+    <text style='font-size:24rpx;color:#48b0f7;' bindtap='toTestlogin' wx:if='{{isShow}}'>账号密码登录</text>
+  </view>
+</view>

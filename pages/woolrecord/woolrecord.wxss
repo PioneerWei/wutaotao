@@ -1,0 +1,74 @@
+.currentwool {
+  padding: 40rpx 0;
+  margin-left: 30rpx;
+  width: 720rpx;
+  border-bottom: 2rpx solid #f7f7f7;
+}
+
+.wooltext1 {
+  font-size: 24rpx;
+  line-height: 33rpx;
+}
+
+.wooltext2 {
+  font-size: 66rpx;
+  line-height: 79rpx;
+  color: #ffc600;
+}
+
+.woolbalance {
+  margin: 10rpx 0;
+}
+
+.woolbalance image {
+  margin-right: 14rpx;
+  margin-top: 15rpx;
+  width: 46rpx;
+  height: 46rpx;
+  vertical-align: top;
+}
+
+.currentwool-li {
+  padding: 30rpx 0;
+  margin-left: 30rpx;
+  width: 720rpx;
+  border-bottom: 2rpx solid #f7f7f7;
+}
+
+.currentwool-title-font {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  font-weight: 600;
+}
+
+.currentwool-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currentwool-title image {
+  margin-right: 20rpx;
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.title-left {
+  display: flex;
+  align-items: center;
+}
+
+.currentwool-date {
+  margin-top: 8rpx;
+  margin-left: 46rpx;
+  width: 550rpx;
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #999;
+}
+
+.currentwool_name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

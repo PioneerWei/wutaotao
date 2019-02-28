@@ -1,0 +1,130 @@
+.conversiondetails-header{
+  padding: 30rpx;
+  margin-bottom: 10rpx;
+  background: #FFFFFF;
+}
+.condetails-tit{
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  line-height: 48rpx;
+}
+.condetails_pristate{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.condetails-price{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-text1{
+  display: inline-block;
+  margin-right: 8rpx;
+  font-size: 36rpx;
+  line-height: 40rpx;
+  color: #FFC600;
+}
+.price-text2{
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #333333;
+}
+.conversions-tate{
+  margin-top: 28rpx;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+}
+.residuenumber{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60rpx;
+  border-radius: 30rpx;
+  font-size: 20rpx;
+  color: #333333;
+  background: #F5F5F5;
+}
+.conversion-details{
+  padding: 30rpx;
+  background: #FFFFFF;
+}
+.conversion-head{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.conversion-head image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.conversion-head-icon{
+  width: 690rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.conversion-head-icon image{
+  margin-left: -20rpx;
+
+}
+.conversion-head-icon image:nth-of-type(1){
+  margin-left:0rpx;
+}
+.conversion-rule{
+  margin: 10rpx 0;
+  padding: 30rpx;
+  background: #FFFFFF;
+}
+.conversion-tit{
+  font-size: 32rpx;
+  line-height: 45rpx;
+}
+.conversion-content{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  text-align: justify;
+  color: #333333;
+}
+.conversion-content text{
+  display: block;
+}
+.commodity-details{
+  padding: 30rpx;
+  background: #FFFFFF;
+}
+.commodity-content{
+  display: block;
+  margin: 20rpx 0;
+  font-size: 28rpx;
+  color: #333333;
+  line-height: 50rpx;
+  text-align: justify;
+}
+.woolconver-btn{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #999999;
+  background: #F7F7F7;
+  text-align: center;
+}
+.status_wait{
+  color: #02BB00;
+}
+.status_now{
+  color: red;
+}
+.status_out{
+  color:#999999;
+}
+.btn_status_now{
+  color: #FFFFFF;
+  background: linear-gradient(to right,rgb(255,191,54), #FF9844)
+}

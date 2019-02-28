@@ -1,0 +1,30 @@
+<include src='../../loading//loading.wxml' />
+<view class='container' hidden='{{!isLoading}}'>
+  <view hidden='{{showEmpty}}'>
+    <block wx:for='{{converList}}' wx:key='index'>
+      <view class='myconversion-li' data-id='{{item.orderid}}' bindtap='toOrderdetails'>
+        <image src='{{item.pro_image}}' class='conlititimg'></image>
+        <view class='convercontent'>
+          <text class='conversion-title'>{{item.pro_name}}</text>
+          <view class='conversion-time'>{{item.dateline}}</view>
+          <view class='conversion-details'>
+            <view>
+              <image src='/images/woolbigicon@2x.png' class='conversion-icon'></image>
+              <text style='color:#FFC600;font-weight:bold;'>{{item.yangmao}}</text>
+            </view>
+            <view style='color:#FF5F67;'>{{item.status}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class='loading_more' hidden='{{isloadingMore}}'>
+      <image src='/images/loading.gif' hidden='{{isloadingText}}'></image>
+      <text hidden='{{isloadingText}}'>加载更多</text>
+      <text hidden='{{!isloadingText}}'>暂无更多数据</text>
+    </view>
+  </view>
+  <view style='text-align:center;padding:270rpx 0 638rpx;' hidden='{{!showEmpty}}'>
+    <image src='/images/empty.png' style='width:280rpx;height:280rpx;'></image>
+    <view style='color:#999999;font-size:24rpx;margin-top:20rpx;'>您还没有兑换过商品</view>
+  </view>
+</view>

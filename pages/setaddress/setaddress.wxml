@@ -1,0 +1,20 @@
+<view class='defaultaddress'>
+  默认收货地址
+</view>
+<view class='clickaddress' bindtap='addAddress'>
+  <view class='noaddress' hidden='{{showAdd}}'>
+    <text class='address-font'>默认收货地址</text>
+    <image src='/images/arrow@2x.png' class='address-icon'></image>
+  </view>
+  <view class='haveaddress' hidden='{{!showAdd}}'>
+    <view class='address-font'>
+      <text>收件人：</text>
+      <text>{{name}}，</text>
+      <text>{{telephone}}</text>
+      <view>
+        {{province}}{{city}}{{area}}{{address}}
+      </view>
+    </view>
+    <image src='/images/arrow@2x.png' class='address-icon'></image>
+  </view>
+</view>

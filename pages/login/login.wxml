@@ -1,0 +1,9 @@
+<view class='loginbox'>
+  <view class='login-logo'>
+    <image src='/images/login_03.jpg'></image>
+    <view>物淘淘</view>
+  </view>
+  <view class='login-btn'>
+    <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">微信登录</button>
+  </view>
+</view>

@@ -1,0 +1,277 @@
+@import "../../poster/listposter/listposter.wxss";
+@import "../../loading/loading.wxss";
+
+.listbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #F7F7F7;
+}
+
+swiper-item {
+  overflow: scroll;
+}
+
+.liuding {
+  width: 100%;
+  height: 112rpx;
+}
+
+.lihuang {
+  position: fixed;
+  top: 0rpx;
+  z-index: 5;
+  padding: 15rpx 0;
+  background: #ffc600;
+  width: 100%;
+}
+
+.categorylist-scroll {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.categorylist-scroll-li {
+  display: inline-block;
+  padding: 10rpx 20rpx;
+  margin: 0 10rpx;
+  text-align: center;
+  min-width: 104rpx;
+}
+
+.scroll-li-text1 {
+  font-size: 22rpx;
+}
+
+.scroll-li-text2 {
+  line-height: 30rpx;
+}
+
+.categorylist-scroll-checkli {
+  background: #fff;
+}
+
+.todayvalue {
+  position: relative;
+  margin-top: 30rpx;
+  width: 100%;
+  box-shadow: 0 2rpx 25rpx 0 rgba(142, 154, 181, 0.20);
+}
+
+.todayvalue-content {
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  border-radius: 4rpx;
+}
+
+.value-img {
+  position: absolute;
+  top: -8rpx;
+  left: 283rpx;
+  width: 184rpx;
+  height: 42rpx;
+  z-index: 10;
+}
+
+.todayvalue-content {
+  text-align: center;
+}
+
+.todayvalue-details {
+  padding: 64rpx 50rpx 50rpx 30rpx;
+}
+
+.read {
+  position: absolute;
+  left: 0;
+  padding-top: 4rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.read text {
+  color: #ffc600;
+}
+
+.todayvalue-content image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.todayvalue-details-text1 {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  height: 84rpx;
+  line-height: 42rpx;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.todayvalue-details-text2 {
+  display: inline-block;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #ff5f67;
+  width: 650rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todayvalue-details-text3 {
+  display: block;
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #999;
+  width: 650rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.business-icon {
+  position: relative;
+  margin: auto;
+  padding: 20rpx 0;
+  width: 92%;
+  height: 36rpx;
+}
+
+.busbusiness_other_border {
+  border-top: 2rpx solid #f7f7f7;
+}
+
+.busbusiness_todu_border {
+  border-top: 2rpx solid #f7f7f7;
+}
+
+.business-time {
+  position: absolute;
+  right: 0;
+  padding-top: 4rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.timeliner::before {
+  content: '|';
+  margin: 10rpx;
+}
+
+.otherlist-li {
+  margin-top: 20rpx;
+  box-shadow: 0 2rpx 25rpx 0 rgba(142, 154, 181, 0.20);
+  background: #FFFFFF;
+}
+
+.otherlist-li-details {
+  display: flex;
+  padding: 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 260rpx;
+}
+
+.otherlist-text {
+  margin-left: 30rpx;
+}
+
+.otherlist-text1 {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre-wrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.overdue {
+  display: inline-block;
+  margin-right: 10rpx;
+  margin-top: -6rpx;
+  width: 60rpx;
+  line-height: 28rpx;
+  background: #999;
+  color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  border-radius: 4rpx;
+}
+
+.otherlist-text2 {
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  width: 460rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #ff5f67;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.otherlist-text3 {
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #999;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.indexbtn {
+  position: fixed;
+  right: 40rpx;
+  bottom: 120rpx;
+  width: 66rpx;
+  height: 66rpx;
+}
+
+.other_read {
+  position: absolute;
+  left: 0;
+  padding-top: 4rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.other_read text {
+  color: #ffc600;
+}
+
+.sharefriend {
+  position: fixed;
+  left: 280rpx;
+  bottom: 80rpx;
+  display: flex;
+  align-items: center;
+  width: 190rpx;
+  height: 50rpx;
+  background: linear-gradient(to right, rgba(255, 191, 54, 0.88), #ff9844);
+  color: #fff;
+  font-size: 24rpx;
+  line-height: 33rpx;
+  border-radius: 50rpx;
+}
+
+.sharefriend image {
+  margin: 0 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.overdue_status {
+  color: #999;
+}

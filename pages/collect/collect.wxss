@@ -1,0 +1,98 @@
+@import "../../loading/loading.wxss";
+.otherlist-li{
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 25rpx 0 rgba(142,154,181,0.20);
+}
+.otherlist-li-details{
+  display: flex;
+  padding: 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 260rpx;
+
+}
+
+.otherlist-text{
+  margin-left: 30rpx;
+}
+.otherlist-text1{
+  font-size: 28rpx;
+  line-height: 42rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre-wrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+}
+.overdue{
+  display: inline-block;
+  margin-right: 10rpx;
+  margin-top: -6rpx;
+  width: 60rpx;
+  line-height: 28rpx;
+  background: #999;
+  color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  border-radius: 4rpx;
+}
+.otherlist-text2{
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  width: 460rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #FF5F67;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.otherlist-text3{
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #999999;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.business-icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 20rpx 0;
+  width: 92%;
+  border-top: 2rpx solid #F7F7F7;
+}
+.business-time{
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #999999;
+}
+.timeliner::before{
+  content: '|';
+  margin: 10rpx;
+}
+.content-list-title{
+  display: flex;
+}
+.list-title-text{
+  display: inline-block;
+  margin-left: 10rpx;
+  line-height: 44rpx;
+  font-size: 24rpx;
+}
+.title-icon{
+  width: 40rpx;
+  height: 40rpx;
+  border: 2rpx solid #F7F7F7;
+  border-radius: 50%;
+}
+.overdue_status{
+  color: #999999;
+}

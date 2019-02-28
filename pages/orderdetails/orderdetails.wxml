@@ -1,0 +1,36 @@
+<view class='container' style='background:white;'>
+  <view style='background:#FFFFFF;'>
+     <view class='conversuccess-header'>
+      <image src='{{image}}' style='width:146rpx;height:146rpx;'></image>
+      <view class='conversuccess-header-text'>
+        <text class='header-text1 textoverflow'>{{title}}</text>
+        <text class='header-text2'>x1</text>
+        <view class='header-price'>
+          <image src='/images/woolbigicon@2x.png' style='width:24rpx;height:24rpx;margin-top:-1rpx;'></image>
+          <text class='header-text3 fontweight'>{{yangmao}}</text>
+        </view>
+      </view>
+     </view>
+     <view class='conversuccess-li'>
+        <view class='conversuccess-li-font'>订单编号</view>
+        <view class='conversuccess-li-font' style='color:#999999;'>{{orderno}}</view>
+     </view>
+     <view class='conversuccess-li'>
+        <view class='conversuccess-li-font'>兑换时间</view>
+        <view class='conversuccess-li-font' style='color:#999999;'>{{dateline}}</view>
+     </view>
+     <view class='conversuccess-li'>
+        <view class='conversuccess-li-font'>状态</view>
+        <view class='conversuccess-li-font' style='color:#FF5F67;'>{{status}}</view>
+     </view>
+     <view class='conversuccess-li'>
+        <view class='conversuccess-li-font'>快递公司</view>
+        <view class='conversuccess-li-font' style='color:#999999;'>{{wuliu_company}}</view>
+     </view>
+     <view class='conversuccess-li'>
+        <view class='conversuccess-li-font'>快递单号</view>
+        <view class='conversuccess-li-font' style='color:#999999;'>{{wuliu_sno}}</view>
+     </view>
+     <view style='width:100%;height:60rpx;margin-top:2rpx;'></view>
+  </view>
+</view>

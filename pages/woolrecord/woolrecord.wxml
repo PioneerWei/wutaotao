@@ -1,0 +1,25 @@
+<view>
+  <view class='currentwool'>
+    <text class='wooltext1 fontweight'>当前羊毛</text>
+    <view class='woolbalance'>
+      <image src='/images/woolbigicon@2x.png'></image>
+      <text class='wooltext2 fontweight'>{{cur_integral}}</text>
+    </view>
+    <text class='wooltext1' style='color:#999999;'>累计获得{{totalyangmao}}羊毛，已使用{{usedyangmao}}羊毛</text>
+  </view>
+  <block wx:for='{{woolList}}' wx:key='index'>
+    <view class='currentwool-li'>
+      <view class='currentwool-title'>
+        <view class='title-left'>
+          <image src='/images/dayicon.png'></image>
+          <text class='currentwool-title-font fontweight'>{{item.title}}</text>
+        </view>
+        <view class='currentwool-title-font' style='color:#FFC600;padding-right:30rpx;'>{{item.integral}}</view>
+      </view>
+      <view class='currentwool-date'>
+        <view class='currentwool_name'>{{item.remark}}</view>
+        <view>{{item.date}}</view>
+      </view>
+    </view>
+  </block>
+</view>

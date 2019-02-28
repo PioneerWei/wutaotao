@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/readinto/readinto",
+    "pages/logintel/logintel",
+    "pages/login/login",
+    "pages/woolrecord/woolrecord",
+    "pages/conversion/conversion",
+    "pages/signin/signin",
+    "pages/categorydetails/categorydetails",
+    "pages/conversiondetails/conversiondetails",
+    "pages/categorylist/categorylist",
+    "pages/confirmorder/confirmorder",
+    "pages/dailytask/dailytask",
+    "pages/setaddress/setaddress",
+    "pages/myconversion/myconversion",
+    "pages/collect/collect",
+    "pages/conversuccess/conversuccess",
+    "pages/orderdetails/orderdetails",
+    "pages/set/set",
+    "pages/sersub/sersub",
+    "pages/attservice/attservice",
+    "pages/everydayshare/everydayshare",
+    "pages/testlogin/testlogin"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#FFA600",
+    "borderStyle": "white",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "甄选优惠",
+        "iconPath": "images/categ@2x.png",
+        "selectedIconPath": "images/categ-check@2x.png"
+      },
+      {
+        "pagePath": "pages/conversion/conversion",
+        "text": "羊毛商城",
+        "iconPath": "images/gconver@2x.png",
+        "selectedIconPath": "images/conversion-check@2x.png"
+      },
+      {
+        "pagePath": "pages/set/set",
+        "text": "我的设置",
+        "iconPath": "images/myset@2x.png",
+        "selectedIconPath": "images/myset-check@2x.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx1edf489cb248852c"
+  ]
+}

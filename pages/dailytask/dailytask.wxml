@@ -1,0 +1,68 @@
+<view class='dailytask' style='border-top:2rpx solid #F5F5F5;'>
+  <view class='daytask-img'>
+    <image src='/images/daytask-bg.png'></image>
+    <view class='dailytask-banner'>
+      <text class='fontweight'>当前羊毛</text>
+      <view class='taskwool-num'>
+        <image src='/images/woolbigicon@2x.png'></image>
+        <text class='fontweight'>{{yangmao}}</text>
+      </view>
+      <navigator url='../woolrecord/woolrecord' hover-class='none'>
+        <view class='lookwool'>查看羊毛记录</view>
+      </navigator>
+    </view>
+  </view>
+  <view class='task-box'>
+    <view class='task-list'>
+      <view>
+        <image src='/images/dayicon.png' class='tasklist-icon'></image>
+        <text class='tasklist-text1 fontweight'>每日签到</text>
+        <view class='tasklist-text2'>羊毛+1~20</view>
+      </view>
+      <navigator url='../signin/signin'>
+        <view class='task-btn {{isAttentSig?"task_btnno":""}}'>{{attentText3}}</view>
+
+      </navigator>
+    </view>
+    <view class='task-list'>
+      <view>
+        <image src='/images/dayicon.png' class='tasklist-icon'></image>
+        <text class='tasklist-text1 fontweight'>阅读优惠信息</text>
+        <view class='tasklist-text2'>每日前3次阅读，可获得相应羊毛奖励</view>
+      </view>
+      <view class='task-btn task-btnShare' bindtap='goRead'>去阅读</view>
+    </view>
+    <view class='task-list'>
+      <view>
+        <image src='/images/dayicon.png' class='tasklist-icon'></image>
+        <text class='tasklist-text1 fontweight'>分享后被点击</text>
+        <view class='tasklist-text2'>每次有效点击+5，每日最多可得15羊毛</view>
+      </view>
+      <view class='task-btn task-btnShare' bindtap='goShare'>去分享</view>
+    </view>
+    <view class='task-list'>
+      <view>
+        <image src='/images/dayicon.png' class='tasklist-icon'></image>
+        <text class='tasklist-text1 fontweight'>邀请新用户</text>
+        <view class='tasklist-text2'>羊毛+10，每日最多可得50羊毛</view>
+      </view>
+      <view class='task-btn' bindtap='goShare'>去邀请</view>
+    </view>
+    <view class='task-list'>
+      <view>
+        <image src='/images/dayicon.png' class='tasklist-icon'></image>
+        <text class='tasklist-text1 fontweight'>关注服务号</text>
+        <view class='tasklist-text2'>羊毛+5</view>
+      </view>
+      <view class='task-btn {{isAttentSer?"task_btnno":""}}' bindtap='attentService'>{{attentText1}}</view>
+    </view>
+    <view class='task-list'>
+      <view>
+        <image src='/images/dayicon.png' class='tasklist-icon'></image>
+        <text class='tasklist-text1 fontweight'>关注订阅号</text>
+        <view class='tasklist-text2'>羊毛+5</view>
+      </view>
+      <view class='task-btn {{isAttentSub?"task_btnno":""}}' bindtap='attentSubscr'>{{attentText2}}</view>
+    </view>
+  </view>
+</view>

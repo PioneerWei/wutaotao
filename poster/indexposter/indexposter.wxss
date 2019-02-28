@@ -1,0 +1,44 @@
+.share-box{
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7)
+}
+.share-btn{
+  position: absolute;
+  bottom: 0rpx;
+  z-index: 999;
+  width: 100%;
+  height: 240rpx;
+  background: #FFFFFF;
+  text-align: center;
+  border-bottom: 2rpx solid #F5F5F5;
+}
+.share-text{
+  display: block;
+  font-size: 24rpx;
+  line-height: 33rpx;
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+}
+.share-icon{
+  display: flex;
+}
+.share-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  font-size: 24rpx;
+  line-height: 33rpx;
+}
+.share-list image{
+  margin-bottom: 28rpx;
+}
+.canvas{
+  position: fixed;
+  left: 150rpx;
+  top: -9999rpx;
+}

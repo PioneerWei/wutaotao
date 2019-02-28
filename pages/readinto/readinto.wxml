@@ -1,0 +1,54 @@
+<view class='read_banner'>
+  <image src='/images/read_banner.png' style='width:100%; height:100%;'></image>
+  <view class='banner_posit'>
+    <view class='banner_tit'>
+      <view class='banner_tit_tit tit_weight'>阅读就能赚羊毛</view>
+      <text class='banner_tit_rich tit_weight'>看的越多赚的越多，可直接兑换商品</text>
+    </view>
+    <view class='banner_content'>
+      <view class='banner_content_rule'>
+        <view>活动规则</view>
+        <text>1.阅读有效的优惠信息，您将获得相应羊毛奖励；</text>
+        <text>2.每天最多获得3次奖励。</text>
+      </view>
+      <view class='banner_content_att'>
+        <view>注意事项</view>
+        <text>1. 每天多次阅读同一信息，当天只计算1次奖励；</text>
+      </view>
+    </view>
+    <view class='banner_end'>一 高额羊毛奖励专区 一</view>
+  </view>
+</view>
+<view class='read_title'>超值优惠</view>
+<view class='read_otherlist'>
+  <block wx:for='{{readInto}}' wx:key='index'>
+    <view class='otherlist-li' data-id='{{item.pid}}' bindtap='litoDeta'>
+      <view class='business-icon'>
+        <view class='content-list-title'>
+          <image src='{{item.brandimage}}' class='title-icon' style='width:40rpx;height:40rpx;'></image>
+          <text class='list-title-text'>{{item.brandname}}</text>
+        </view>
+        <view class='business-time'>
+          <text>{{item.platform}}</text>
+        </view>
+      </view>
+      <view class='otherlist-li-details'>
+        <view style='width:200rpx;height:200rpx;'>
+          <image src='{{item.image}}' style='width:200rpx;height:200rpx;'></image>
+        </view>
+        <view class='otherlist-text'>
+          <view class='otherlist-text1 fontweight'>
+            <text>{{item.pro_name}}</text>
+          </view>
+          <view class='otherlist-text2'>{{item.pro_price_des}}</view>
+          <view class='otherlist-text3'>{{item.tuijian_reason}}</view>
+        </view>
+      </view>
+      <view class='other_read'>阅读
+        <text>+{{item.integral}}羊毛</text>
+      </view>
+    </view>
+  </block>
+  <view class='btn_more' bindtap='backHome'>查看更多</view>
+</view>
+<image src='/images/home@2x.png' class='indexbtn' bindtap='backHome'></image>

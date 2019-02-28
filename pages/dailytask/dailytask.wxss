@@ -1,0 +1,100 @@
+.daytask-img{
+  position: relative;
+}
+.daytask-img image{
+  width: 100%;
+  height: 356rpx;
+}
+.dailytask-banner{
+  position: absolute;
+  top: 0;
+  padding-top: 20rpx;
+  width: 100%;
+  height: 356rpx;
+  background-size: 100% 100%;
+  text-align: center;
+}
+.dailytask-banner text{
+  font-size: 24rpx;
+  line-height: 33rpx;
+}
+.taskwool-num{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10rpx 0 30rpx;
+}
+.taskwool-num image{
+  width: 46rpx;
+  height: 46rpx;
+}
+.taskwool-num text{
+  display: inline-block;
+  margin-left: 10rpx;
+  font-size: 66rpx;
+  line-height: 79rpx;
+  color: #FFC600;
+}
+.lookwool{
+  margin: auto;
+  width: 152rpx;
+  line-height: 44rpx;
+  text-align: center;
+  font-size: 20rpx;
+  border: 2rpx solid #000000;
+  border-radius: 22rpx;
+  background: #FFFFFF;
+}
+.dailytask{
+  position: relative
+}
+.task-box{
+  position: absolute;
+  top: 276rpx;
+  left: 30rpx;
+}
+.task-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  box-sizing: border-box;
+  margin:0 auto 30rpx;
+  width: 690rpx;
+  height: 140rpx;
+  box-shadow: 0 2rpx 25rpx 0 rgba(142, 154, 181, 0.2);
+  background: #FFFFFF;
+}
+.tasklist-icon{
+  width: 26rpx;
+  height: 26rpx;
+}
+.tasklist-text1{
+  display: inline-block;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.tasklist-text2{
+  margin-left: 46rpx;
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+.task-btn{
+  width: 92rpx;
+  line-height: 44rpx;
+  border-radius: 22rpx;
+  color: #FFFFFF;
+  font-size: 20rpx;
+  text-align: center;
+  background: linear-gradient(to right, rgba(255,191,54,0.88) 0%, #FF9844 )
+}
+.task_btnno{
+  background: #F7F7F7;
+  color: #999999;
+}
+/* .task-btnShare{
+  padding: 0;
+  margin: 0;
+} */

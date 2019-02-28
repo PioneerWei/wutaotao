@@ -1,0 +1,43 @@
+@import "../../loading/loading.wxss";
+.myconversion-li{
+  display: flex;
+  padding: 20rpx;
+  background: #FFFFFF;
+  margin-bottom: 10rpx;
+}
+.conlititimg{
+  margin-right: 20rpx;
+  width: 146rpx;
+  height: 146rpx;
+}
+
+.conversion-details{
+  display: flex;
+  justify-content: space-between;
+  width: 544rpx;
+  font-size: 24rpx;
+
+}
+.conversion-title{
+  display: block;
+  width: 544rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.conversion-time{
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  font-size: 22rpx;
+  line-height: 30rpx;
+  color: #999999;
+}
+.conversion-icon{
+  margin-top:6rpx;
+  margin-right: 12.5rpx;
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: top;
+}

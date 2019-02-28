@@ -1,0 +1,46 @@
+<view class='addbox'>
+  <view class='confirmaddress' bindtap='addAddress' hidden='{{showAdd}}'>
+    <image src='/images/+@2x.png'></image>
+    <text>添加收货地址</text>
+  </view>
+  <view class='haveaddress' hidden='{{!showAdd}}' bindtap='addAddress'>
+    <view class='address-font'>
+      <view class='textoverflow'>
+        <text>收件人：</text>
+        <text>{{name}}，</text>
+        <text>{{telephone}}</text>
+      </view>
+      <view class='textoverflow'>
+        {{province}}{{city}}{{area}}{{address}}
+      </view>
+    </view>
+    <image src='/images/arrow@2x.png' class='address-icon'></image>
+  </view>
+  <view>
+    <view class='conversuccess-header'>
+      <image src='{{image}}' style='width:146rpx;height:146rpx;'></image>
+      <view class='conversuccess-header-text'>
+        <text class='header-text1'>{{title}}</text>
+        <text class='header-text2'>x1</text>
+        <view class='header-price'>
+          <image src='/images/woolbigicon@2x.png' style='width:24rpx;height:24rpx;margin-top:-1rpx;'></image>
+          <text class='header-text3 fontweight'>{{yangmao}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='conversuccess-li'>
+      <view class='conversuccess-li-font'>运费</view>
+      <view class='conversuccess-li-font' style='color:#999999;'>￥ 0</view>
+    </view>
+    <view class='conversuccess-li'>
+      <view class='conversuccess-li-font'>羊毛总额</view>
+      <view class='conversuccess-li-font' style='color:#999999;'>{{yangmao}}</view>
+    </view>
+    <view class='conversuccess-li'>
+      <view class='conversuccess-li-font'>当前账户羊毛</view>
+      <view class='conversuccess-li-font' style='color:#999999;'>{{cur_integral}}</view>
+    </view>
+
+  </view>
+  <view class='conversion-btn' bindtap='confirmOrder'>{{yangmao}} 羊毛兑换</view>
+</view>

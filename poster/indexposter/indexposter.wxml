@@ -1,0 +1,18 @@
+  <view class='share-box' wx:if='{{isShare}}' catchtouchmove='true'>
+    <view style='width:100%;height:100%;' bindtap='closePoster'>
+      <canvas class='canvas' canvas-id='indexshare' style='width:1200rpx;height:1800rpx;'></canvas>
+    </view>
+    <view class='share-btn' hidden='{{!isAlert}}'>
+      <text class='share-text'>分享</text>
+      <view class='share-icon'>
+        <view class='share-list share-poster' bindtap='createPoster'>
+          <image src='/images/download@2x.png' style='width:28rpx;height:34rpx;'></image>
+          <text>生成分享海报</text>
+        </view>
+        <button class='share-list share-friend' hover-class='btn-hover' open-type='share'>
+          <image src='/images/wechat@2x.png' style='width:41rpx;height:34rpx;'></image>
+          <text>转发给好友</text>
+        </button>
+      </view>
+    </view>
+  </view>

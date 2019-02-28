@@ -1,0 +1,40 @@
+<include src='../../loading//loading.wxml' />
+<view class='conver_box' hidden='{{!isLoading}}'>
+  <view class='balance' bindtap='toTask'>
+    <image src='/images/Mask.png'></image>
+    <view class='balance_num'>
+      <text class='balance_num1'>当前羊毛</text>
+      <view class='balance_num2'>
+        <text>{{yangmao}}</text>
+        <image src='/images/conver_leftbtn.png' style='width:14rpx;height:24rpx;'></image>
+      </view>
+    </view>
+  </view>
+  <view class='limi_conversion'>
+    <view class='content_tit'>
+      <text class='content_tit1'>限量抢兑</text>
+      <text class='content_tit2'>白拿好物</text>
+    </view>
+    <view class='conversion-content'>
+      <block wx:for='{{conversionLi}}' wx:key='index'>
+        <view class='conversion-content-list' data-id='{{item.pid}}' bindtap='contoCondeta'>
+          <image src='{{item.pro_image}}' style='width:300rpx;height:300rpx;border-radius:8rpx;'></image>
+          <view class='list-title-text'>{{item.pro_brand_name}}官方小程序</view>
+          <text class='content-font content-text fontweight'>{{item.pro_name}}</text>
+          <view class='content-price'>
+            <text>
+              <text class='price-number fontweight'>{{item.yangmao}}</text>
+              <text class='wool'>羊毛</text>
+            </text>
+            <view class='content-price-btn {{item.status==0?"status_now":(item.status==2?"status_out":"")}}'>{{item.statusshow}}</view>
+          </view>
+        </view>
+      </block>
+      <view class='loading_more' hidden='{{isloadingMore}}'>
+        <image src='/images/loading.gif' hidden='{{isloadingText}}'></image>
+        <text hidden='{{isloadingText}}'>加载更多</text>
+        <text hidden='{{!isloadingText}}'>暂无更多数据</text>
+      </view>
+    </view>
+  </view>
+</view>

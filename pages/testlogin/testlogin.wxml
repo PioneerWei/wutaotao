@@ -1,0 +1,9 @@
+<view style='margin-bottom:40rpx;margin-left:40rpx;'>
+<text style='line-height:80rpx; font-size:28rpx;'>账号</text>
+<input style='border:4rpx solid #F7F7F7; width:670rpx;height:80rpx;'bindinput="number"></input>
+</view>
+<view style='margin-bottom:40rpx;margin-left:40rpx;'>
+<text style='line-height:80rpx; font-size:28rpx;'>密码</text>
+<input style='border:4rpx solid #F7F7F7; width:670rpx;height:80rpx;'bindinput="passward"></input>
+</view>
+<button style='width:240rpx; height:80rpx; background:#ffc600;line-height:80rpx;color:#ffffff;' bindtap='login'>登录</button>

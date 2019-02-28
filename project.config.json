@@ -1,0 +1,79 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.2",
+	"appid": "wxc76cf5f3cac1ce56",
+	"projectname": "wutaotao",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "测试",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "测试1",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": "1047"
+				},
+				{
+					"id": 2,
+					"name": "list",
+					"pathName": "pages/categorylist/categorylist",
+					"query": "uid=351&id=31",
+					"scene": "1012"
+				},
+				{
+					"id": 3,
+					"name": "details",
+					"pathName": "pages/categorydetails/categorydetails",
+					"query": "uid=351&id=12321",
+					"scene": "1012"
+				},
+				{
+					"id": 4,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "byuid=351",
+					"scene": "1007"
+				}
+			]
+		}
+	}
+}

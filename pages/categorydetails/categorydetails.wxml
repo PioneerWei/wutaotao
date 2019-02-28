@@ -1,0 +1,118 @@
+<include src='../../loading//loading.wxml' />
+<view class='container' style='padding-bottom: 70rpx;' hidden='{{!isLoading}}'>
+  <view class='details-content'>
+    <swiper style='width:400rpx;height:400rpx;margin:0 auto 30rpx;' class='details-img'>
+      <swiper-item wx:for='{{pro_image}}' wx:key='index'>
+        <image src='{{item}}' class='details-img'></image>
+      </swiper-item>
+    </swiper>
+    <view class='read' wx:if='{{guoqiStatu}}'>阅读
+      <text>+{{read_reward}}羊毛</text>
+    </view>
+    <view class='details-title {{!guoqiStatu?"guoqiStatu":""}}'>
+      <text class='font'>{{pro_title}}</text>
+      <text class='font details-title-text2 fontweight {{!guoqiStatu?"guoqiStatu":""}}'>{{pro_price_des}}</text>
+      <text class='details-title-text3'>{{pingtai}}</text>
+    </view>
+    <view class='details-sharefriend' bindtap='catdetailsShare' hidden='{{!guoqiStatu}}'>
+      <image src='/images/sendfriend@2x.png'></image>
+      <text>分享给朋友</text>
+    </view>
+    <view class='details-guoqi' hidden='{{guoqiStatu}}'>
+      <text>信息已过期</text>
+    </view>
+  </view>
+  <include src='../../poster/catdetailsposter/catdetailsposter.wxml' />
+  <view class='strategy'>
+    <view class='strategy-tit'>购买攻略</view>
+    <view class='strategy-content'>
+      <view style='color:#FF5F67;margin:20rpx 0;'>{{goumailiyou}}</view>
+      <rich-text nodes='{{gonglue}}'></rich-text>
+    </view>
+  </view>
+  <view class='details-scroll' hidden='{{!isShow}}'>
+    <view class='scroll-tit fontweight'>品牌其他优惠</view>
+    <scroll-view scroll-x="true">
+      <view wx:for='{{brandOther}}' wx:key='index' class='details-scroll-list' data-id='{{item.pid}}' bindtap='toDetails'>
+        <image src='{{item.image}}'></image>
+        <view class='scroll-font scroll-list-tit'>{{item.pro_title}}</view>
+        <text class='scroll-font scroll-price'>{{item.price}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='details-scroll' hidden='{{!isAboutshow}}'>
+    <view class='scroll-tit fontweight'>相关推荐</view>
+    <scroll-view scroll-x="true">
+      <view wx:for='{{relatedRec}}' wx:key='index' class='details-scroll-list' data-id='{{item.pid}}' bindtap='toDetails'>
+        <image src='{{item.image}}'></image>
+        <view class='scroll-font scroll-list-tit'>{{item.pro_title}}</view>
+        <text class='scroll-font scroll-price'>{{item.price}}</text>
+      </view>
+
+    </scroll-view>
+  </view>
+  <image src='/images/home@2x.png' class='indexbtn' bindtap='backHome'></image>
+  <view class='footershare' wx:if='{{guoqiStatu}}'>
+    <view class='share-left'>
+      <view hidden='{{isCollect}}'>
+        <image src='/images/star@2x.png' bindtap='Collect'></image>
+      </view>
+      <view hidden='{{!isCollect}}'>
+        <image src='/images/star-che@2x.png' bindtap='delCollect'></image>
+      </view>
+      <view>
+        <image src='/images/friends@2x.png' bindtap='catdetailsShare'></image>
+      </view>
+    </view>
+    <view class='purchase-right fontweight' bindtap='copyalert' bindtap='goBuy'>去购买</view>
+  </view>
+
+</view>
+<!-- 复制链接弹层 -->
+<view class='alert-box' wx:if='{{isAlertcopy}}' catchtouchmove='true'>
+  <view class='copylink-alert'>
+    <text class='alert-tit'>{{aletName}}链接复制成功!</text>
+    <view class='alert-con'>请前往您手机自带的「浏览器」，粘贴并打开连接，进行购买</view>
+    <view class='alert-btn' bindtap='iKnow'>我知道了</view>
+  </view>
+</view>
+<!-- 购买方式弹层 -->
+<view hidden='{{!isBuyalert}}' catchtouchmove='true'>
+  <view class='alert-box' bindtap='closeAlert'></view>
+  <scroll-view class='buy_type' scroll-y='true'>
+    <view>
+      <view class='buy_type_tit'>主商品</view>
+      <view class='buy_type_content' bindtap='zhuShangPin'>
+        <text>{{pname}}</text>
+        <image src='/images/arrow@2x.png'></image>
+      </view>
+    </view>
+    <view hidden='{{isShowCou}}'>
+      <view class='buy_type_tit'>凑单品</view>
+      <block wx:for='{{coudanpin}}' wx:key='index'>
+        <view class='buy_type_content' bindtap='couDanPin' data-link='{{item.link}}' data-skuid='{{item.skuid}}'>
+          <text>{{item.title}}</text>
+          <image src='/images/arrow@2x.png'></image>
+        </view>
+      </block>
+    </view>
+    <view hidden='{{isShowYou}}'>
+      <view class='buy_type_tit'>优惠券</view>
+      <block wx:for='{{youhuiquan}}' wx:key='index'>
+        <view class='buy_type_content' bindtap='youHuiQuan' data-link='{{item.link}}'>
+          <text>{{item.title}}</text>
+          <image src='/images/arrow@2x.png'></image>
+        </view>
+      </block>
+    </view>
+    <view hidden='{{isShowHuo}}'>
+      <view class='buy_type_tit'>活动</view>
+      <block wx:for='{{huodong}}' wx:key='index'>
+        <view class='buy_type_content' bindtap='huoDong' data-link='{{item.link}}'>
+          <text>{{item.title}}</text>
+          <image src='/images/arrow@2x.png'></image>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

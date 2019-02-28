@@ -1,0 +1,33 @@
+.loginbox{
+  text-align: center;
+}
+.login-logo{
+  padding-top:100rpx;
+  margin-bottom: 120rpx; 
+  font-size: 32rpx;
+  line-height: 45rpx;
+  font-weight: 600;
+}
+.login-logo image{
+  margin-bottom: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.login-btn text{
+  font-size: 20rpx;
+  line-height: 28rpx;
+  color: #999999;
+}
+button{
+  margin: 20rpx auto;
+  width: 510rpx;
+  line-height: 80rpx;
+  background: linear-gradient(to right,rgba(255,191,54,0.88), #FF9844);
+  border-radius: 40rpx;
+  color: #FFFFFF;
+  font-size: 28rpx;
+}
+button::after{
+border:none;
+}

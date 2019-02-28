@@ -1,0 +1,68 @@
+<view class='signinbox'>
+  <view class='signin-banner'>
+    <image src='/images/card@2x.png'></image>
+    <view class='signin-banner-text'>
+      <view class='muchdays fontweight'>您已连续签到<text class='daysnum'>{{qiandao}}</text>天</view>
+      <text style='font-size:24rpx;line-height:33rpx;'>连续签到获得更多</text>
+    </view>
+  </view>
+  <view class='sigin-list'>
+    <view class='signin-li {{qiandao>=min?"hover":""}}'>
+      <text style='font-weight:600;font-size:26rpx;'>+1</text>
+      <view>
+        <image src='/images/woolbigicon-g@2x.png' hidden='{{qiandao>=min?"hover":""}}'></image>
+        <image src='/images/woolbigicon@2x.png' hidden='{{qiandao<min?"hover":""}}'></image>
+      </view>
+      <text style='font-size:22rpx;'>第1天</text>
+    </view>
+    <view class='signin-li {{qiandao>=min+1?"hover":""}}'>
+      <text style='font-weight:600;font-size:26rpx;'>+2</text>
+      <view>
+        <image src='/images/woolbigicon-g@2x.png' hidden='{{qiandao>=min+1?"hover":""}}'></image>
+        <image src='/images/woolbigicon@2x.png' hidden='{{qiandao<min+1?"hover":""}}'></image>
+      </view>
+      <text style='font-size:22rpx;'>第2天</text>
+    </view>
+    <view class='signin-li {{qiandao>=min+2?"hover":""}}'>
+      <text style='font-weight:600;font-size:26rpx;'>+3</text>
+      <view>
+        <image src='/images/woolbigicon-g@2x.png' hidden='{{qiandao>=min+2?"hover":""}}'></image>
+        <image src='/images/woolbigicon@2x.png' hidden='{{qiandao<min+2?"hover":""}}'></image>
+      </view>
+      <text style='font-size:22rpx;'>第3天</text>
+    </view>
+    <view class='signin-li {{qiandao>=min+3?"hover":""}}'>
+      <text style='font-weight:600;font-size:26rpx;'>+4</text>
+      <view>
+        <image src='/images/woolbigicon-g@2x.png' hidden='{{qiandao>=min+3?"hover":""}}'></image>
+        <image src='/images/woolbigicon@2x.png' hidden='{{qiandao<min+3?"hover":""}}'></image>
+      </view>
+      <text style='font-size:22rpx;'>第4天</text>
+    </view>
+    <view class='signin-li {{qiandao>=min+4?"hover":""}}'>
+      <text style='font-weight:600;font-size:26rpx;'>+5</text>
+      <view>
+        <image src='/images/woolbigicon-g@2x.png' hidden='{{qiandao>=min+4?"hover":""}}'></image>
+        <image src='/images/woolbigicon@2x.png' hidden='{{qiandao<min+4?"hover":""}}'></image>
+      </view>
+      <text style='font-size:22rpx;'>第5天</text>
+    </view>
+    <view class='signin-li {{qiandao>=min+5?"hover":""}}'>
+      <text style='font-weight:600;font-size:26rpx;'>+6</text>
+      <view>
+        <image src='/images/woolbigicon-g@2x.png' hidden='{{qiandao>=min+5?"hover":""}}'></image>
+        <image src='/images/woolbigicon@2x.png' hidden='{{qiandao<min+5?"hover":""}}'></image>
+      </view>
+      <text style='font-size:22rpx;'>第6天</text>
+    </view>
+    <view class='signin-li {{qiandao>=min+6?"hover":""}}'>
+      <text style='font-weight:600;font-size:26rpx;'>+20</text>
+      <view>
+        <image src='/images/woolbigicon-g@2x.png' hidden='{{qiandao>=min+6?"hover":""}}'></image>
+        <image src='/images/woolbigicon@2x.png' hidden='{{qiandao<min+6?"hover":""}}'></image>
+      </view>
+      <text style='font-size:22rpx;'>第7天</text>
+    </view>
+  </view>
+  <view class='fontweight {{signinBtn?"sigin-btn":"sigin_btn_over"}}' bindtap='signIn'>{{signinText}}</view>
+</view>
